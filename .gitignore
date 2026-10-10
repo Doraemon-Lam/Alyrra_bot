@@ -1,0 +1,15 @@
+.env
+.venv/
+__pycache__/
+*.log
+usage.json
+usage.tmp
+member_names.json
+member_names.tmp
+image_usage.json
+image_usage.tmp
+generated_images/
+runtime_config.json
+runtime_config.tmp
+*.docx
+dist/

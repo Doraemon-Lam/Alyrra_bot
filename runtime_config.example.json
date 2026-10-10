@@ -1,0 +1,11 @@
+{
+  "mode": "economy",
+  "batch_seconds": 3,
+  "message_threshold": 10,
+  "daily_calls": 200,
+  "daily_tokens": 500000,
+  "admin_member_openids": [],
+  "image_enabled": true,
+  "image_daily_calls": 10,
+  "image_cooldown_seconds": 60
+}
