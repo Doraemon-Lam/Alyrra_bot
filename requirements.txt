@@ -2,3 +2,5 @@ qq-botpy==1.2.1
 google-genai==2.25.0
 python-dotenv==1.2.3
 Pillow>=11,<13
+pilk==0.2.4
+imageio-ffmpeg==0.6.0

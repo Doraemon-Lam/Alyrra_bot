@@ -13,3 +13,9 @@ runtime_config.json
 runtime_config.tmp
 *.docx
 dist/
+voice_usage.json
+voice_usage.tmp
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+rendered_cards/

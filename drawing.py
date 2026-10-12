@@ -51,9 +51,15 @@ def drawing_prompt(text):
 
 
 async def generate_image(client, prompt):
+    parts = [types.Part(text='请根据以下需求生成一张图片。\n' + prompt)]
+    reference = ROOT / 'templates' / 'assets' / 'alyrra.jpg'
+    if reference.exists() and re.search(r'alyrra|艾璃拉|艾璃|自画像|你自己', prompt, re.I):
+        parts.append(types.Part(text='这是 Alyrra 的形象参考。保留薄荷绿长发、蓝紫眼睛、精灵尖耳、大型黑色蝴蝶结、青蓝交叉发饰和黑白青蓝服装的识别特征。'))
+        parts.append(types.Part.from_bytes(data=reference.read_bytes(), mime_type='image/jpeg'))
+        LOG.info('生图已附带 Alyrra 角色参考图。')
     response = await wait_with_progress(client.aio.models.generate_content(
         model=os.getenv('IMAGE_MODEL', 'gemini-3.1-flash-image'),
-        contents='请根据以下需求生成一张图片。\n' + prompt,
+        contents=parts,
         config=types.GenerateContentConfig(
             http_options=types.HttpOptions(timeout=120000),
             response_modalities=['TEXT', 'IMAGE'],

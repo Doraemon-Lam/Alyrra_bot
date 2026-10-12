@@ -7,5 +7,13 @@
   "admin_member_openids": [],
   "image_enabled": true,
   "image_daily_calls": 10,
-  "image_cooldown_seconds": 60
+  "image_cooldown_seconds": 60,
+  "voice_input_enabled": true,
+  "voice_reply_mode": "auto",
+  "voice_daily_calls": 30,
+  "tts_voice": "Kore",
+  "rvc_enabled": false,
+  "rvc_command": [],
+  "cards_enabled": true,
+  "card_theme": "random"
 }

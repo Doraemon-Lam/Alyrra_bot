@@ -28,7 +28,7 @@ def make_vertex():
         vertexai=True, credentials=credentials,
         project=os.environ['GOOGLE_CLOUD_PROJECT'],
         location=os.getenv('GOOGLE_CLOUD_LOCATION', 'global'),
-        http_options=types.HttpOptions(timeout=45000,
+        http_options=types.HttpOptions(timeout=90000,
             retry_options=types.HttpRetryOptions(attempts=1)))
 
 
@@ -92,6 +92,7 @@ def main():
     vertex = make_vertex()
     prompt = system_prompt()
     LOG.info('Vertex 客户端与 Alyrra 人格已加载。')
+    LOG.info('聊天请求超时：90 秒；500/503/504 最多重试一次。')
     if args.check:
         asyncio.run(check_vertex(vertex, prompt))
         return

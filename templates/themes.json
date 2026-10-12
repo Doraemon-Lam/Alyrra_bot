@@ -1,0 +1,5 @@
+{
+  "forest": {"name": "晨光歌林", "subtitle": "FOREST MELODY", "top": "#123B32", "bottom": "#286958", "accent": "#C7EDB2", "paper": "#EFF5E9"},
+  "starlight": {"name": "月夜星河", "subtitle": "STARRY REVERIE", "top": "#171D43", "bottom": "#514675", "accent": "#E4CAFA", "paper": "#F4EFFA"},
+  "stage": {"name": "舞台花信", "subtitle": "BLOOMING STAGE", "top": "#532D46", "bottom": "#9F666F", "accent": "#FFD7B0", "paper": "#FFF1E7"}
+}
